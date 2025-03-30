@@ -1,6 +1,6 @@
 from flask import Flask, render_template, url_for
 import os
-from . import __version__
+from __init__ import __version__
 
 app = Flask(__name__)
 

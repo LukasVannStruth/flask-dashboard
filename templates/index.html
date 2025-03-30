@@ -6,7 +6,12 @@
 </head>
 
 <body>
+    <h1 class="title">LVS Dashboard</h1>
     <p>Dashboard up and running!</p>
+
+    <p> FGT SN from SNMP: {{ FGT_SN }}</p>
+    <p> Current download: {{ download }}</p>
+    <p> Current upload: {{upload }}</p>
 
     <div class="footer">
         <p class="version">v{{ envvars.version }}</p>
