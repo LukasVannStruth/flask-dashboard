@@ -1,7 +1,7 @@
 from flask import Flask, render_template, url_for
 import os
-from __init__ import __version__
-
+import sys
+import snmp
 app = Flask(__name__)
 
 template_dir = os.path.join(os.getcwd(), 'templates')
