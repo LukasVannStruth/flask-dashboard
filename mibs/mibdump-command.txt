@@ -1,0 +1,1 @@
+pipenv run mibdump --destination-directory=compiled_mibs --mib-source=./mibs --destination-format=pysnmp FORTINET-CORE-MIB.mib FORTINET-FORTIGATE-MIB.mib
