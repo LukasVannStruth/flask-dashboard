@@ -5,10 +5,20 @@
     <link rel="stylesheet" href="{{ envvars.stylesheet }}"/>
 </head>
 
+<script type="text/javascript"> 
+    const ws = new WebSocket('{{ envvars.ws_url }}');
+    ws.addEventListener("open", (event) => {
+        ws.send("Hello server")
+    });
+</script>
+
 <body>
     <h1 class="title">LVS Dashboard</h1>
     <p>Dashboard up and running!</p>
 
+    <form action="/snmp/fgt_sn" method="get">
+        <button class="snmp-button">Check FGT S/N</button>
+    </form>
     <p> FGT SN from SNMP: {{ FGT_SN }}</p>
 
     <div class="footer">

@@ -18,12 +18,7 @@ ifInOctets = ObjectType(ObjectIdentity(
 )
 '''
 
-mib_builder = builder.MibBuilder()
-mib_builder.add_mib_sources(builder.DirMibSource("/home/lukas/lvs-dev/learning-jenkins/flask-dashboard/compiled_mibs"))
-mib_builder.load_module('FORTINET-CORE-MIB')
-mib_view_controller = view.MibViewController(mib_builder)
-
-async def run_cmd(mib_oid):
+async def run_cmd(mib_oid, mib_view_controller):
     snmpEngine = SnmpEngine()
 #   object =  ObjectIdentity(mib, oid).add_asn1_mib_source("file:///home/lukas/lvs-dev/learning-jenkins/flask-dashboard/mibs", "http://mibs.snmplabs.com/asn1/@mib@")
 #   object =  ObjectIdentity(mib, oid).add_mib_source("file:///home/lukas/lvs-dev/learning-jenkins/flask-dashboard/mibs", "http://mibs.snmplabs.com/asn1/@mib@")
